@@ -19,6 +19,19 @@ import csv
 
 
 #BernardoGuerino
+def cadastrar_tarefa(agenda)
+    tarefa= {
+        'Tarefa' : input("Digite a tarefa que teve ser realizada "),
+        'Lista' : input("Lista : "),
+        'Data' : input("Digite a data "),
+        'Status' : "Pendente"
+    }
+    agenda.append(tarefa)
+    criar_csv()
+    print("")
+    print("Tarefa adicionada")
+    print("")
+    
 
 
 
