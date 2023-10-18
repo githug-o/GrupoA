@@ -18,12 +18,22 @@ from datetime import datetime
 #GitHug-o
 def imprimir_atrasadas(agenda):
     for tarefa in agenda:
-        if agenda['Data'] > datetime.now():
+        if agenda['Data'] > datetime.now() and agenda['Status'] == "Concluido":
             print(tarefa)
         else:
             print("Não há atividades atrasadas!")
     criar_arquivo()
 
+def deletar_tarefa(agenda):
+    pesquisa = input("Digite o nome que deseja excluir: ")
+    for tarefa in agenda:
+        if agenda['Data'] > datetime.now() and agenda['Status'] == "Concluido":
+            print(tarefa)
+        else:
+            print("Não há atividades atrasadas!")
+    criar_arquivo()
+
+    
 
 #BernardoGuerino
 
