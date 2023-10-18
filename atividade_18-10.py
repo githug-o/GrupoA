@@ -1,4 +1,5 @@
 import csv
+from datetime import datetime
 
 
 #escrevam o cógido abaixo do comentário com seu nome
@@ -15,7 +16,13 @@ import csv
 
 
 #GitHug-o
-
+def imprimir_atrasadas(agenda):
+    for tarefa in agenda:
+        if agenda['Data'] > datetime.now():
+            print(tarefa)
+        else:
+            print("Não há atividades atrasadas!")
+    criar_arquivo()
 
 
 #BernardoGuerino
