@@ -1,4 +1,5 @@
 import csv
+from datetime import datetime
 
 
 #escrevam o cógido abaixo do comentário com seu nome
@@ -28,8 +29,24 @@ def ler_csv():
             print(f"|  {linha['Tarefa']} |   {linha['Lista']}    |   {linha['Data']}    |   {linha['Status']}    |")            
 
 #GitHug-o
+def imprimir_atrasadas(agenda):
+    for tarefa in agenda:
+        if agenda['Data'] > datetime.now() and agenda['Status'] == "Concluido":
+            print(tarefa)
+        else:
+            print("Não há atividades atrasadas!")
+    criar_arquivo()
 
+def deletar_tarefa(agenda):
+    pesquisa = input("Digite o nome que deseja excluir: ")
+    for tarefa in agenda:
+        if agenda['Data'] > datetime.now() and agenda['Status'] == "Concluido":
+            print(tarefa)
+        else:
+            print("Não há atividades atrasadas!")
+    criar_arquivo()
 
+    
 
 #BernardoGuerino
 
